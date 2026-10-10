@@ -1,5 +1,7 @@
 # Task Management API
 
+[คู่มือภาษาไทย: เรียนตั้งแต่ศูนย์ พร้อม What/Why/How และขั้นตอนลงมือทำ](docs/GUIDE_TH.md)
+
 A Flask REST API for creating, tracking, updating, and deleting tasks. Data persists in SQLite across server restarts. The application separates HTTP routes, validation/business logic, and database access.
 
 ## Project preview
