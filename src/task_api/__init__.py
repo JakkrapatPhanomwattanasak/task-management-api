@@ -3,7 +3,7 @@
 import os
 from pathlib import Path
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from werkzeug.exceptions import HTTPException
 
 from . import db
@@ -23,6 +23,10 @@ def create_app(config=None):
     with app.app_context():
         db.init_db()
     app.register_blueprint(tasks, url_prefix="/api/tasks")
+
+    @app.get("/")
+    def dashboard():
+        return render_template("index.html")
 
     @app.get("/health")
     def health():

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Task Management | Workspace</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='app.js') }}" defer></script></head>
+<body><main>
+<header><p class="eyebrow">TASK MANAGEMENT API</p><h1>Keep work moving.</h1><p>Create a task, change its status, and track what is finished.</p></header>
+<div class="layout"><section class="panel"><h2>Add a task</h2><form id="create">
+<label>Task title<input name="title" maxlength="120" placeholder="Prepare project demo" required></label>
+<label>Description<textarea name="description" maxlength="2000" rows="4" placeholder="What needs to happen?"></textarea></label>
+<button type="submit">Create task</button></form>
+<p class="hint">Changes are saved through the Flask API to SQLite and survive a server restart.</p></section>
+<section class="panel"><div class="toolbar"><h2>Your tasks</h2><label>Status<select id="filter"><option value="">All statuses</option><option value="todo">To do</option><option value="in_progress">In progress</option><option value="done">Done</option></select></label></div>
+<p id="message" role="status" aria-live="polite">Loading tasks…</p><div id="tasks"></div>
+<nav class="pager" aria-label="Task pages"><button id="previous" class="secondary">Previous</button><span id="page"></span><button id="next" class="secondary">Next</button></nav></section></div>
+<footer>Portfolio demo · Task Management API · No user accounts; run on localhost</footer>
+</main></body></html>

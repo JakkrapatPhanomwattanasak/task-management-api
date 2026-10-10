@@ -2,6 +2,14 @@
 
 A Flask REST API for creating, tracking, updating, and deleting tasks. Data persists in SQLite across server restarts. The application separates HTTP routes, validation/business logic, and database access.
 
+## Project preview
+
+[Open the public interactive demo](https://jakkrapat-project-lab.happy-bud-2264.chatgpt.site/#tasks)
+
+![Task Management dashboard connected to the Flask CRUD API and SQLite](docs/images/dashboard.png)
+
+The Python app now includes a working dashboard for task creation, status updates, deletion, filtering, and pagination. The hosted preview stores demo tasks in your browser; the Python version persists them through the REST API to SQLite.
+
 ## Run locally
 
 Python 3.11+ (PowerShell):
